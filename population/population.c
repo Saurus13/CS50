@@ -9,7 +9,7 @@ int main(void)
     {
         start = get_int("Start Size: ");
     }
-    while (n < 9);
+    while (start < 9);
 
     // TODO: Prompt for end size
     int end;
@@ -23,7 +23,7 @@ int main(void)
     int n = 0; //number of years
     for(int i = 0; i <= end; i++){
         start += start/3;
-        start -= start/4
+        start -= start/4;
         n++;
     }
     // TODO: Print number of years

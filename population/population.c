@@ -20,8 +20,13 @@ int main(void)
     while (end < start);
 
     // TODO: Calculate number of years until we reach threshold
+    int n = 0; //number of years
     for(int i = 0; i <= end; i++){
-        
+        start += start/3;
+        start -= start/4
+        n++;
     }
     // TODO: Print number of years
+    
+
 }

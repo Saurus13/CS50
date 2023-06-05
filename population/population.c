@@ -27,6 +27,6 @@ int main(void)
         n++;
     }
     // TODO: Print number of years
-    
+    printf("%i\n", n);
 
 }

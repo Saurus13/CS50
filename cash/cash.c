@@ -51,9 +51,9 @@ int calculate_quarters(int cents)
 {
     // TODO
     int quarters = 0;
-    for (int i = 0; i < cents; i++)
+    for (int i = 1; i <= cents; i++)
     {
-        if (i % cents == 0)
+        if (cents % i == 0)
         {
             quarters++;
         }

@@ -53,7 +53,7 @@ int calculate_quarters(int cents)
     int quarters = 0;
     for (int i = 1; i <= cents; i++)
     {
-        if (cents % i == 0)
+        if (i % cents == 0)
         {
             quarters++;
         }

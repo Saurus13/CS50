@@ -14,12 +14,20 @@ int main(void)
     int bits[8];
     for (int i = 0; i < x; i++) //loop through string
     {
+        /*
         int j = 0;
         while (message[i] > 0) //dec to binary convertor
         {
             bits[j] = message[i] % 2;
             message[i] = message[i] / 2;
             j++;
+        }
+        */
+        for(int j = 0; j < 8; j++)
+        {
+            bits[j] = message[i] % 2;
+            message[i] = message[i] / 2;
+            //j++;
         }
         for (int k = 7; k >= 0; k--) //print bulbs
         {

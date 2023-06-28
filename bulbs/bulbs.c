@@ -20,6 +20,7 @@ int main(void)
             message[i] = message[i] / 2;
             j++;
         }
+        for (int k = 7; k)
     }
 
     // TODO

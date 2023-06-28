@@ -21,7 +21,7 @@ int main(void)
             message[i] = message[i] / 2;
             j++;
         }
-        for (int k = j-1; k >= 0; k--) //print bulbs
+        for (int k = 7; k >= 0; k--) //print bulbs
         {
             print_bulb(bits[k]);
         }

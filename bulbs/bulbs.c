@@ -9,7 +9,8 @@ void print_bulb(int bit);
 int main(void)
 {
     string message = get_string("Message: ");
-
+    int bits[8];
+    
     // TODO
 }
 

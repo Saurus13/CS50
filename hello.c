@@ -9,5 +9,6 @@ int main(void)
     //printf("hello, %s\n", name); //print name
    // printf("%i", ' '/2);
    string s = "HI!";
-   printf("%ld", strlen(s));
+   int x = strlen(s);
+   printf("%d", x);
 }

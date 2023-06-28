@@ -24,6 +24,7 @@ int main(void)
         {
             print_bulb(bits[k]);
         }
+        printf("\n");
     }
 }
 

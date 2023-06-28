@@ -10,6 +10,7 @@ void print_bulb(int bit);
 int main(void)
 {
     string message = get_string("Message: ");
+    printf("%i\n", strlen(message));
     int bits[8];
     for (int i = 0; i < strlen(message); i++) //loop through string
     {

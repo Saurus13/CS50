@@ -9,12 +9,13 @@ void print_bulb(int bit);
 int main(void)
 {
     string message = get_string("Message: ");
-    int bits[8];
     for (int i = 0; i < strlen(message); i++) //dec to bin convertor
     {
+        int bits[8];
         for(int j = 0; j < 8; j++)
         {
-            if (message[i] % 2 == 0)
+            int x = message[i];
+            if (x % 2 == 0)
             {
                 bits[j] = 0;
             }
@@ -22,6 +23,7 @@ int main(void)
             {
                 bits[j] = 1;
             }
+            x%2;
         }
 
     }

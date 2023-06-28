@@ -14,7 +14,7 @@ int main(void)
         int bits[8];
         for(int j = 0; j < 8; j++)
         {
-            int x = message[i];
+            char x = message[i];
             if (x % 2 == 0)
             {
                 bits[j] = 0;
@@ -23,7 +23,7 @@ int main(void)
             {
                 bits[j] = 1;
             }
-            x%2;
+            x = floor(x/2);
         }
 
     }

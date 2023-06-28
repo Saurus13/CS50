@@ -12,6 +12,7 @@ int main(void)
     int bits[strlen(message)*8];
     for (int i = 0; i < strlen(message); i++)
     {
+        
 
     }
 

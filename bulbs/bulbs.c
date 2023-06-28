@@ -12,7 +12,17 @@ int main(void)
     int bits[8];
     for (int i = 0; i < strlen(message); i++) //dec to bin convertor
     {
-        if (message[i] % 2 == 0)
+        for(int j = 0; j < 8; j++)
+        {
+            if (message[i] % 2 == 0)
+            {
+                bits[j] = 0;
+            }
+            else
+            {
+                bits[j] = 1;
+            }
+        }
 
     }
 

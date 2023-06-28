@@ -12,19 +12,10 @@ int main(void)
     string message = get_string("Message: ");
     for (int i = 0; i < strlen(message); i++) //dec to bin convertor
     {
-        int bits[8];
-        for(int j = 0; j < 8; j++)
+        int j = 0;
+        while (message[i] > 0)
         {
-            char x = message[i];
-            if (x % 2 == 0)
-            {
-                bits[j] = 0;
-            }
-            else
-            {
-                bits[j] = 1;
-            }
-            x = floor(x/2);
+            
         }
     }
 

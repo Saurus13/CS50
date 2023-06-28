@@ -10,7 +10,7 @@ int main(void)
 {
     string message = get_string("Message: ");
     int bits[strlen(message)*8];
-    for (int i = 0; i < strlen(message); i++)
+    for (int i = 0; i < strlen(message); i++) //dec to bin convertor
     {
         
 

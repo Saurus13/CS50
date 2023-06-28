@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 const int BITS_IN_BYTE = 8;
 
@@ -25,7 +26,6 @@ int main(void)
             }
             x = floor(x/2);
         }
-
     }
 
     // TODO

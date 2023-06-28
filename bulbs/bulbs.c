@@ -10,12 +10,15 @@ void print_bulb(int bit);
 int main(void)
 {
     string message = get_string("Message: ");
+    int binaryNum[strlen(message)*8];
     for (int i = 0; i < strlen(message); i++) //dec to bin convertor
     {
         int j = 0;
         while (message[i] > 0)
         {
-            
+            binaryNum[j] = message[i] % 2;
+            message[i] = message[i] / 2;
+            j++;
         }
     }
 

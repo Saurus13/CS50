@@ -13,14 +13,14 @@ Bubble: O(n^2) --> Might be Sort1
 Merge: O(n log(n)) --> Must be Sort2
 Selection: O(n^2)
 
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
 How do you know?: TODO

@@ -15,12 +15,17 @@ Selection: O(n^2)
 
 sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: Bubble sort runs at O(n^2) time on average, but runs on O(n) time in the best case which in this case is a
+fully sorted list to begin with. After testing sort1 against sort3 in time effectiveness for an already sorted list, sort1 was much
+faster overall, which means it is likely Bubble sort.
 
 sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: From the time measuements, Merge sort should be the quickest overall, since it has O(n log(n)) time.
+After testing sort2 on unsorted and sorted lists, it came out with the quickest times in each against the other 2 sorts which
+likely means it is Merge sort.
 
 sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Selection sort runs at O(n^2) time in the best and average cases, meaning it is one of the slowest algorithms overall
+as compared to Merge and Bubble sorts. After running 

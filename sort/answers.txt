@@ -4,8 +4,14 @@ Time Sort3, random 5000 = 0.072s
 
 Time Sort1, random 50000 = 7.514s --> Slowest algo, as n gets large slows down
 Time Sort2, random 50000 = 0.417s --> Fastest algo, doesnt care about n
-TIme Sort3, random 50000 = 3.117s
+Time Sort3, random 50000 = 3.117s
 
+Time Sort1, sorted50000 = 0.534s
+Time Sort3, sorted50000 = 3.101s
+
+Bubble: O(n^2) --> Might be Sort1
+Merge: O(n log(n)) --> Must be Sort2
+Selection: O(n^2)
 
 sort1 uses: TODO
 

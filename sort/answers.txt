@@ -28,4 +28,5 @@ likely means it is Merge sort.
 sort3 uses: Selection Sort
 
 How do you know?: Selection sort runs at O(n^2) time in the best and average cases, meaning it is one of the slowest algorithms overall
-as compared to Merge and Bubble sorts. After running 
+as compared to Merge and Bubble sorts. After running sort1 against sort3 in an already sorted algorithm, sort3 was slower even though
+the algorithm should be easier to sort since its already sorted. This means sort3 is likely Selection sort.

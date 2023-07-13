@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -164,11 +165,13 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
+    int win_num = floor(voter_count/2); //# of votes needed to win
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > floor(voter_count/2))
+        if (candidates[i].votes > win_num) //if candidate votes surpass needed votes
         {
-            
+            printf("%s", candidates[i].name); //print name
+            return true;
         }
     }
     return false;

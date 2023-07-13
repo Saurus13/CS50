@@ -195,6 +195,7 @@ int find_min(void)
 
     for (int j = 0; j < candidate_count; j++)
     {
+        if ()
 
     }
     return min_num;

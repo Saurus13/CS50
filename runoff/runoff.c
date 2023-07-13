@@ -185,8 +185,8 @@ int find_min(void)
     {
         if (candidates[i].eliminated == true)
         {
-            continue;
             count++;
+            continue;
         }
         else
         {

@@ -132,7 +132,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
             preferences[voter][rank] = i;
             return true;
@@ -165,7 +165,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int win_num = floor(voter_count/2); //# of votes needed to win
+    int win_num = floor(voter_count / 2); //# of votes needed to win
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > win_num) //if candidate votes surpass needed votes

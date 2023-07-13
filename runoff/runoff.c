@@ -170,7 +170,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > win_num) //if candidate votes surpass needed votes
         {
-            printf("%s", candidates[i].name); //print name
+            printf("%s\n", candidates[i].name); //print name
             return true;
         }
     }

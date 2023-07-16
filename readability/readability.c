@@ -12,6 +12,7 @@ int main(void)
     string s = get_string("Text: ");
     printf("Letters: %i\n", count_letters(s));
     printf("Words: %i\n", count_words(s));
+    printf("Sentences: %i\n", count_sentences(s));
 }
 
 int count_letters(string text)
@@ -42,5 +43,13 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    
+    int num_sentences = 1;
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if (ispunct(text[i]) != 0)
+        {
+            num_sentences++;
+        }
+    }
+    return num_sentences;
 }

@@ -13,7 +13,8 @@ int main(void)
     string s = get_string("Text: ");
     float L = 100.0 * count_letters(s) / count_words(s);
     float S = 100.0 * count_sentences(s) / count_words(s);
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8; //Coleman-Liau Formula
+    printf("%f\n", index);
     int rounded_index = round(index);
     if (index < 1.0)
     {
@@ -30,7 +31,7 @@ int main(void)
 
 }
 
-int count_letters(string text)
+int count_letters(string text) //find num of letters in string
 {
     int num_letters = 0;
     for (int i = 0; i < strlen(text); i++)
@@ -43,7 +44,7 @@ int count_letters(string text)
     return num_letters;
 }
 
-int count_words(string text)
+int count_words(string text) //find num of words in string
 {
     int num_words = 1;
     for (int i = 0; i < strlen(text); i++)
@@ -56,7 +57,7 @@ int count_words(string text)
     return num_words;
 }
 
-int count_sentences(string text)
+int count_sentences(string text) //find num of sentences in string
 {
     int num_sentences = 0;
     for (int i = 0; i < strlen(text); i++)

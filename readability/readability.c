@@ -11,6 +11,7 @@ int count_sentences(string text);
 int main(void)
 {
     string s = get_string("Text: ");
+    printf("%i\n", count_sentences(s));
     float L = (float)count_letters(s) / 100;
     printf("%f\n", L);
     float S = (float)count_sentences(s) / 100;

@@ -10,9 +10,9 @@ int count_sentences(string text);
 int main(void)
 {
     string s = get_string("Text: ");
-    printf("Letters: %i\n", count_letters(s));
-    printf("Words: %i\n", count_words(s));
-    printf("Sentences: %i\n", count_sentences(s));
+    float L = (float)count_letters(s)/100;
+    float S = (float)count_sentences(s)/100;
+    if ()
 }
 
 int count_letters(string text)

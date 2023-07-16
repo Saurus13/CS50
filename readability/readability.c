@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 int count_letters(string text);
+int count_words(string text);
 
 int main(void)
 {
@@ -13,13 +14,22 @@ int main(void)
 
 int count_letters(string text)
 {
-    int count = 0;
-    for (int i = 0; i < strlen(text); i++)
+    int num_letters = 0;
+    for (int i = 0, int n = strlen(text); i < n; i++)
     {
         if (isalpha(text[i]) != 0)
         {
-            count++;
+            num_letters++;
         }
     }
-    return count;
+    return num_letters;
+}
+
+int count_words(string text)
+{
+    int num_words = 1;
+    for (int i = 0, int n = strlen(text); i < n; i++)
+    {
+        if (isspace(text[i] != ))
+    }
 }

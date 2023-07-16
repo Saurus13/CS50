@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -37,4 +38,9 @@ int count_words(string text)
         }
     }
     return num_words;
+}
+
+int count_sentences(string text)
+{
+    
 }

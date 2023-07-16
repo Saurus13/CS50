@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 #include <ctype.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -10,9 +11,23 @@ int count_sentences(string text);
 int main(void)
 {
     string s = get_string("Text: ");
-    float L = (float)count_letters(s)/100;
-    float S = (float)count_sentences(s)/100;
-    if ()
+    float L = (float)count_letters(s) / 100;
+    float S = (float)count_sentences(s) / 100;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int rounded_index = round(index);
+    if (rounded_index < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    if (rounded_index > 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade: %i\n", rounded_index);
+    }
+
 }
 
 int count_letters(string text)

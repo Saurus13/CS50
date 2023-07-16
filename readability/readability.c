@@ -24,7 +24,7 @@ int main(void)
     {
         printf("Grade 16+\n");
     }
-    else
+    if (1.0 < index < 16.0)
     {
         printf("Grade %i\n", rounded_index);
     }

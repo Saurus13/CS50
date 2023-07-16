@@ -14,17 +14,16 @@ int main(void)
     float L = 100.0 * count_letters(s) / count_words(s);
     float S = 100.0 * count_sentences(s) / count_words(s);
     float index = 0.0588 * L - 0.296 * S - 15.8; //Coleman-Liau Formula
-    printf("%f\n", index);
     int rounded_index = round(index);
     if (index < 1.0)
     {
         printf("Before Grade 1\n");
     }
-    if (index > 16.0)
+    else if (index > 16.0)
     {
         printf("Grade 16+\n");
     }
-    if (1.0 < index < 16.0)
+    else if (1.0 < index < 16.0)
     {
         printf("Grade %i\n", rounded_index);
     }

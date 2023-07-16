@@ -16,7 +16,7 @@ int main(void)
 int count_letters(string text)
 {
     int num_letters = 0;
-    for (int i = 0, int n = strlen(text); i < n; i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]) != 0)
         {
@@ -29,7 +29,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     int num_words = 1;
-    for (int i = 0, int n = strlen(text); i < n; i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isspace(text[i]) != 0)
         {

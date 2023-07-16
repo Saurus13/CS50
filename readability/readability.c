@@ -10,6 +10,7 @@ int main(void)
 {
     string s = get_string("Text: ");
     printf("Letters: %i\n", count_letters(s));
+    printf("Words: %i\n", count_words(s));
 }
 
 int count_letters(string text)
@@ -30,6 +31,10 @@ int count_words(string text)
     int num_words = 1;
     for (int i = 0, int n = strlen(text); i < n; i++)
     {
-        if (isspace(text[i] != ))
+        if (isspace(text[i]) != 0)
+        {
+            num_words++;
+        }
     }
+    return num_words;
 }

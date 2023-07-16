@@ -14,7 +14,7 @@ int main(void)
     float L = 100.0 * count_letters(s) / count_words(s);
     float S = 100.0 * count_sentences(s) / count_words(s);
     float index = 0.0588 * L - 0.296 * S - 15.8; //Coleman-Liau Formula
-    int rounded_index = round(index);
+    int rounded_index = round(index); //find rounded index
     if (index < 1.0)
     {
         printf("Before Grade 1\n");
@@ -33,7 +33,7 @@ int main(void)
 int count_letters(string text) //find num of letters in string
 {
     int num_letters = 0;
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++) //check if letter
     {
         if (isalpha(text[i]) != 0)
         {
@@ -46,7 +46,7 @@ int count_letters(string text) //find num of letters in string
 int count_words(string text) //find num of words in string
 {
     int num_words = 1;
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++) //check if space
     {
         if (isspace(text[i]) != 0)
         {
@@ -59,12 +59,12 @@ int count_words(string text) //find num of words in string
 int count_sentences(string text) //find num of sentences in string
 {
     int num_sentences = 0;
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++) //check if punctuation
     {
         if (text[i] == '!' || text[i] == '.' || text[i] == '?')
         {
             num_sentences++;
         }
     }
-    return num_sentences;
+    return num_sentences; 
 }

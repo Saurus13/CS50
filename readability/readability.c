@@ -12,10 +12,13 @@ int main(void)
 {
     string s = get_string("Text: ");
     float L = (float)count_letters(s) / 100;
+    printf("%f\n", L);
     float S = (float)count_sentences(s) / 100;
+    printf("%f\n", S);
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int rounded_index = round(index);
-    if (rounded_index < 1)
+    printf("%i\n", rounded_index);
+    /*if (rounded_index < 1)
     {
         printf("Before Grade 1\n");
     }
@@ -26,7 +29,7 @@ int main(void)
     else
     {
         printf("Grade: %i\n", rounded_index);
-    }
+    }*/
 
 }
 

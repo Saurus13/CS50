@@ -15,11 +15,11 @@ int main(void)
     float S = 100.0 * count_sentences(s) / count_words(s);
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int rounded_index = round(index);
-    if (index < 1)
+    if (index < 1.0)
     {
         printf("Before Grade 1\n");
     }
-    if (index > 16)
+    if (index > 16.0)
     {
         printf("Grade 16+\n");
     }

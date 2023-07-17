@@ -57,14 +57,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    int tmp1 = image[0][0].rgbtRed;
-    printf("%i\n", tmp1);
-    image[0][0].rgbtRed = image[0][width].rgbtRed;
-    printf("%i\n", image[0][0].rgbtRed);
-    image[0][width].rgbtRed = tmp1;
-    printf("%i\n", image[0][width].rgbtRed);
-
-    /*for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
@@ -90,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 image[i][width-j].rgbtGreen = tmp3;
             }
         }
-    }*/
+    }
     return;
 }
 

@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <math.h>
+#include <stdio.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -56,7 +57,14 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    int tmp1 = image[0][0].rgbtRed;
+    printf("%i\n", tmp1);
+    image[0][0].rgbtRed = image[0][width].rgbtRed;
+    printf("%i\n", image[0][0].rgbtRed);
+    image[0][width].rgbtRed = tmp1;
+    printf("%i\n", image[0][width].rgbtRed);
+
+    /*for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
@@ -67,8 +75,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             else
             {
                 int tmp1 = image[i][j].rgbtRed;
+                printf("%i\n", tmp1);
                 image[i][j].rgbtRed = image[i][width-j].rgbtRed;
+                printf("%i\n", image[i][j].rgbtRed);
                 image[i][width-j].rgbtRed = tmp1;
+                printf("%i\n", image[i][width-j].rgbtRed);
 
                 int tmp2 = image[i][j].rgbtBlue;
                 image[i][j].rgbtBlue = image[i][width-j].rgbtBlue;
@@ -79,7 +90,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 image[i][width-j].rgbtGreen = tmp3;
             }
         }
-    }
+    }*/
     return;
 }
 

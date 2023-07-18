@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 
+//find minimum between 2 numbers
 int min(int num1, int num2)
 {
     if (num2 < num1)
@@ -42,10 +43,15 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++) //find colour values for sepia
         {
-            sepiaRed = min(255, round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue));
-            sepiaBlue = min(255, round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue));
-            sepiaGreen = min(255, round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue));
+            //find rgb values for sepia
+            sepiaRed = min(255, round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 *
+                                      image[i][j].rgbtBlue)); //check to ensure rounded value does not exceed 255
+            sepiaBlue = min(255, round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 *
+                                       image[i][j].rgbtBlue)); //check to ensure rounded value does not exceed 255
+            sepiaGreen = min(255, round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 *
+                                        image[i][j].rgbtBlue)); //check to ensure rounded value does not exceed 255
 
+            //transfer values into image
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;
@@ -61,17 +67,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < (width / 2); j++) //swap until reaching halfway through width
         {
-            int tmp1 = image[i][j].rgbtRed;
-            image[i][j].rgbtRed = image[i][width-j-1].rgbtRed;
-            image[i][width-j-1].rgbtRed = tmp1;
+            int tmp1 = image[i][j].rgbtRed; //store in temp variable
+            image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+            image[i][width - j - 1].rgbtRed = tmp1;
 
-            int tmp2 = image[i][j].rgbtBlue;
-            image[i][j].rgbtBlue = image[i][width-j-1].rgbtBlue;
-            image[i][width-j-1].rgbtBlue = tmp2;
+            int tmp2 = image[i][j].rgbtBlue; //store in temp variable
+            image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+            image[i][width - j - 1].rgbtBlue = tmp2;
 
-            int tmp3 = image[i][j].rgbtGreen;
-            image[i][j].rgbtGreen = image[i][width-j-1].rgbtGreen;
-            image[i][width-j-1].rgbtGreen = tmp3;
+            int tmp3 = image[i][j].rgbtGreen; //store in temp variable
+            image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
+            image[i][width - j - 1].rgbtGreen = tmp3;
         }
     }
     return;
@@ -98,9 +104,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    sumRed += image[i+k][j+l].rgbtRed;
-                    sumBlue += image[i+k][j+l].rgbtBlue;
-                    sumGreen += image[i+k][j+l].rgbtGreen;
+                    //change values for rgb
+                    sumRed += image[i + k][j + l].rgbtRed;
+                    sumBlue += image[i + k][j + l].rgbtBlue;
+                    sumGreen += image[i + k][j + l].rgbtGreen;
                     count++; //keep track of how many tiles we are averaging
                 }
             }
@@ -110,7 +117,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++) //transfer copy rgb values into image
     {
         for (int j = 0; j < width; j++)
         {

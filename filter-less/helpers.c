@@ -91,19 +91,27 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    int avgRed = 0;
-    int avgBlue = 0;
-    int avgGreen = 0;
-
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            if (i-1 < 0)
+            int sumRed = 0;
+            int sumBlue = 0;
+            int sumGreen = 0;
+            int count = 0.0;
+            for (int k = -1; k < 2; k++) //check for edge cases
             {
-
+                for (int l = -1; l < 2; l++)
+                {
+                    if (i + k < 0 || i + k > height - 1 || j + l < 0 || j + h > width - 1) //if edge, skip counting rgb
+                    {
+                        continue;
+                    }
+                    sumRed += 
+                }
             }
-            else if ()
+
+
 
         }
     }

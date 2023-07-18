@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int k = 0; k < 9; k++)
             {
-                
+                avgRed = round()
             }
 
         }

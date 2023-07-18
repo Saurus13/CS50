@@ -31,22 +31,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++) //find colour values for sepia
         {
-            sepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtBlue + .189 * image[i][j].rgbtGreen);
-            sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtBlue + .131 * image[i][j].rgbtGreen);
-            sepiaGreen = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtBlue + .168 * image[i][j].rgbtGreen);
-            if (sepiaRed > 255) //if exceed, set to 255
-            {
-                image[i][j].rgbtRed = 255;
-            }
-            else if (sepiaBlue > 255) //if exceed, set to 255
-            {
-                image[i][j].rgbtBlue = 255;
-            }
-            else if (sepiaGreen > 255) //if exceed, set to 255
-            {
-                image[i][j].rgbtGreen = 255;
-            }
-            
+            sepiaRed = min(255, round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtBlue + .189 * image[i][j].rgbtGreen));
+            sepiaBlue = min(255, round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtBlue + .131 * image[i][j].rgbtGreen));
+            sepiaGreen = min(255, round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtBlue + .168 * image[i][j].rgbtGreen));
+
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;

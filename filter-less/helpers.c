@@ -2,6 +2,17 @@
 #include <math.h>
 #include <stdio.h>
 
+int min(int num1, int num2)
+{
+    if (num2 < num1)
+    {
+        return num2;
+    }
+    else
+    {
+        return num1;
+    }
+}
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {

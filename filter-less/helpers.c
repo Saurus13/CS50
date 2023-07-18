@@ -103,18 +103,30 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = -1; l < 2; l++)
                 {
-                    if (i + k < 0 || i + k > height - 1 || j + l < 0 || j + h > width - 1) //if edge, skip counting rgb
+                    if (i + k < 0 || i + k > height - 1 || j + l < 0 || j + l > width - 1) //if edge, skip counting rgb
                     {
                         continue;
                     }
-                    sumRed += 
+                    sumRed += image[i+k][j+l].rgbtRed;
+                    sumBlue += image[i+k][j+l].rgbtBlue;
+                    sumGreen += image[i+k][j+l].rgbtGreen;
+                    count++; //keep track of how many tiles we are averaging
                 }
             }
-
-
-
+            copy[i][j].rgbtRed = round(sumRed / count);
+            copy[i][j].rgbtBlue = round(sumBlue / count);
+            copy[i][j].rgbtGreen = round(sumGreen / count);
         }
     }
 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = copy[i][j].rgbtRed;
+            image[i][j].rgbtBlue = copy[i][j].rgbtBlue;
+            image[i][j].rgbtGreen = copy[i][j].rgbtGreen;
+        }
+    }
     return;
 }

@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     int rounded = 0;
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++) //find average value of rgb and apply to each pixel
         {
             avg = (image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtGreen) / 3.0;
             rounded = round(avg);
@@ -29,20 +29,20 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     int sepiaGreen = 0;
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++) //find colour values for sepia
         {
             sepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtBlue + .189 * image[i][j].rgbtGreen);
             sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtBlue + .131 * image[i][j].rgbtGreen);
             sepiaGreen = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtBlue + .168 * image[i][j].rgbtGreen);
-            if (sepiaRed > 255)
+            if (sepiaRed > 255) //if exceed, set to 255
             {
                 sepiaRed = 255;
             }
-            if (sepiaBlue > 255)
+            if (sepiaBlue > 255) //if exceed, set to 255
             {
                 sepiaBlue = 255;
             }
-            if (sepiaGreen > 255)
+            if (sepiaGreen > 255) //if exceed, set to 255
             {
                 sepiaGreen = 255;
             }
@@ -59,7 +59,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < floor(width / 2); j++)
+        for (int j = 0; j < floor(width / 2); j++) //swap until reaching halfway through width
         {
             int tmp1 = image[i][j].rgbtRed;
             image[i][j].rgbtRed = image[i][width-j].rgbtRed;
@@ -80,15 +80,32 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
+    RGBTRIPLE copy[height][width]; //copy of original image
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width; j++) //copy 'image' into 'copy'
         {
             copy[i][j].rgbtRed = image[i][j].rgbtRed;
             copy[i][j].rgbtBlue = image[i][j].rgbtBlue;
             copy[i][j].rgbtGreen = image[i][j].rgbtGreen;
         }
     }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            if (j < 0 || i < 0)
+            {
+                continue;
+            }
+            else
+            {
+                
+            }
+
+        }
+    }
+
     return;
 }

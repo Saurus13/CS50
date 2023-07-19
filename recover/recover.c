@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[SIZE];
     int counter = 0;
 
-    while (feof(inputPtr) == 0 || fread(buffer, sizeof(uint8_t), SIZE, inputPtr))
+    while (fread(buffer, sizeof(uint8_t), SIZE, inputPtr) || feof(inputPtr) == 0 )
     {
         if (isHeader(buffer)) //creating new jpg in file
         {

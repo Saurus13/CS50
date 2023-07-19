@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
     }
 
     char* input_file = argv[1];
-    if (input_file == NULL) //check if file is valid
+    /*if (input_file == NULL) //check if file is valid
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
-    }
+    }*/
 
-    
+
 
     return 0;
 }

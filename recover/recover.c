@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover IMAGE\n");
         return 1;
     }
-    
+
+    char* input_file = argv[1];
 
 
     return 0;

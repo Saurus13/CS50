@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
                 fclose(outputPtr);
             }
             //first time code runs
-            sprintf(filename, "03a.jpg", counter);
+            sprintf(filename, "%03a.jpg", counter);
             outputPtr = fopen(filename, "w");
             counter++;
         }
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
         if (outputPtr != NULL) //writing
         {
             fwrite(buffer, size(buffer), 1, outputPtr);
-            
+
 
         }
     }

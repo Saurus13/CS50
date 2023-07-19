@@ -25,11 +25,16 @@ int main(int argc, char *argv[])
     char filename[8]; // 8 chars in '000.jpg\0'
     FILE* outputPtr = NULL;
     uint8_t buffer[SIZE];
+    typedef uint8_t BYTE;
     int counter = 0;
 
-    
-
-
+    while (feof(inputPtr) == 0 || fread(buffer, BYTE, SIZE, inputPtr))
+    {
+        buffer[0] == 0xff
+        && buffer[1] == 0xd8
+        && buffer[2] == 0xff
+        && (buffer[3] & 0xf0) == 0xe0;
+    }
 
     return 0;
 }

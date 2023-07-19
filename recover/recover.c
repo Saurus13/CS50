@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 #define SIZE 512;
+
 int main(int argc, char *argv[])
 {
     if (argc != 2) //check if user runs program in valid manner
@@ -13,6 +14,11 @@ int main(int argc, char *argv[])
     }
 
     char* input_file = argv[1];
+    if (input_file == NULL) //check if file is valid
+    {
+        printf("Usage: ./recover IMAGE\n");
+        return 1;
+    }
 
 
     return 0;

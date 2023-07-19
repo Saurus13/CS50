@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     }
 
     char* inputFile = argv[1];
-    if (input_file == NULL) //check if file is valid
+    if (inputFile == NULL) //check if file is valid
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;

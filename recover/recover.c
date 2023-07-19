@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
     while (feof(inputPtr) == 0 || fread(buffer, sizeof(uint8_t), SIZE, inputPtr))
     {
-        if (isHeader(buffer) == true) //creating new jpg in file
+        if (isHeader(buffer)) //creating new jpg in file
         {
             if (outputPtr != NULL)
             {

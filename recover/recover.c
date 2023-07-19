@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char* input_file = argv[1];
-    /*if (input_file == NULL) //check if file is valid
+    char* inputFile = argv[1];
+    if (input_file == NULL) //check if file is valid
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
-    }*/
+    }
 
     //initialization
     FILE* inputPtr = fopen(inputFile, "r");

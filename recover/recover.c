@@ -5,6 +5,11 @@
 
 #define SIZE 512;
 
+bool isHeader (uint8_t buffer[])
+{
+    return buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0;
+}
+
 int main(int argc, char *argv[])
 {
     if (argc != 2) //check if user runs program in valid manner
@@ -30,10 +35,12 @@ int main(int argc, char *argv[])
 
     while (feof(inputPtr) == 0 || fread(buffer, BYTE, SIZE, inputPtr))
     {
-        buffer[0] == 0xff
-        && buffer[1] == 0xd8
-        && buffer[2] == 0xff
-        && (buffer[3] & 0xf0) == 0xe0;
+        if (isHeader(buffer) == true)
+        {
+            sprintf(filename, "03a.jpg", counter);
+            outputPtr = fopen(filename, "w");
+            counter++;
+        }
     }
 
     return 0;

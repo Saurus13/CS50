@@ -50,9 +50,15 @@ int main(int argc, char *argv[])
         if (outputPtr != NULL) //writing
         {
             fwrite(buffer, size(buffer), 1, outputPtr);
-
-
         }
+    }
+    if (inputPtr != NULL)
+    {
+        fclose(inputPtr);
+    }
+    if (outputPtr != NULL)
+    {
+        fclose(outputPtr);
     }
 
     return 0;

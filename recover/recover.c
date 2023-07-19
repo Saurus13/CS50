@@ -42,21 +42,21 @@ int main(int argc, char *argv[])
                 fclose(outputPtr);
             }
             //first time code runs
-            sprintf(filename, "%03a.jpg", counter);
+            sprintf(filename, "%03i.jpg", counter);
             outputPtr = fopen(filename, "w");
             counter++;
         }
 
         if (outputPtr != NULL) //writing
         {
-            fwrite(buffer, size(buffer), 1, outputPtr);
+            fwrite(buffer, sizeof(buffer), 1, outputPtr);
         }
     }
-    if (inputPtr != NULL)
+    if (inputPtr == NULL)
     {
         fclose(inputPtr);
     }
-    if (outputPtr != NULL)
+    if (outputPtr == NULL)
     {
         fclose(outputPtr);
     }

@@ -5,7 +5,7 @@
 
 #define SIZE 512
 
-bool isHeader (uint8_t buffer[])
+bool isHeader(uint8_t buffer[])
 {
     return buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0;
 }
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char* inputFile = argv[1];
+    char *inputFile = argv[1];
     if (inputFile == NULL) //check if file is valid
     {
         printf("Usage: ./recover IMAGE\n");
@@ -26,13 +26,13 @@ int main(int argc, char *argv[])
     }
 
     //initialization
-    FILE* inputPtr = fopen(inputFile, "r");
+    FILE *inputPtr = fopen(inputFile, "r");
     char filename[8]; // 8 chars in '000.jpg\0'
-    FILE* outputPtr = NULL;
+    FILE *outputPtr = NULL;
     uint8_t buffer[SIZE];
     int counter = 0;
 
-    while (fread(buffer, sizeof(uint8_t), SIZE, inputPtr) || feof(inputPtr) == 0 )
+    while (fread(buffer, sizeof(uint8_t), SIZE, inputPtr) || feof(inputPtr) == 0)
     {
         if (isHeader(buffer)) //creating new jpg in file
         {

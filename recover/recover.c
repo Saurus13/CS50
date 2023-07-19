@@ -49,7 +49,8 @@ int main(int argc, char *argv[])
 
         if (outputPtr != NULL) //writing
         {
-            fwrite(nuffer, size(buffer))
+            fwrite(buffer, size(buffer), 1, outputPtr);
+            
 
         }
     }

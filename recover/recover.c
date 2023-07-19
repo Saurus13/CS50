@@ -30,10 +30,9 @@ int main(int argc, char *argv[])
     char filename[8]; // 8 chars in '000.jpg\0'
     FILE* outputPtr = NULL;
     uint8_t buffer[SIZE];
-    typedef uint8_t BYTE;
     int counter = 0;
 
-    while (feof(inputPtr) == 0 || fread(buffer, BYTE, SIZE, inputPtr))
+    while (feof(inputPtr) == 0 || fread(buffer, sizeof(uint8_t), SIZE, inputPtr))
     {
         if (isHeader(buffer) == true) //creating new jpg in file
         {

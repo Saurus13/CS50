@@ -35,11 +35,22 @@ int main(int argc, char *argv[])
 
     while (feof(inputPtr) == 0 || fread(buffer, BYTE, SIZE, inputPtr))
     {
-        if (isHeader(buffer) == true)
+        if (isHeader(buffer) == true) //creating new jpg in file
         {
+            if (outputPtr == NULL)
+            {
+                fclose(outputPtr);
+            }
+            //first time code runs
             sprintf(filename, "03a.jpg", counter);
             outputPtr = fopen(filename, "w");
             counter++;
+        }
+
+        if (outputPtr != NULL) //writing
+        {
+            fwrite(nuffer, size(buffer))
+
         }
     }
 

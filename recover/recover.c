@@ -51,11 +51,11 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(buffer), 1, outputPtr);
         }
     }
-    if (inputPtr == NULL)
+    if (inputPtr != NULL)
     {
         fclose(inputPtr);
     }
-    if (outputPtr == NULL)
+    if (outputPtr != NULL)
     {
         fclose(outputPtr);
     }

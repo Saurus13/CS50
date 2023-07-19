@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
     FILE* inputPtr = fopen(input_file, "r");
     char filename[8]; // 8 chars in '000.jpg\0'
     FILE* outputPtr = NULL;
+    uint8_t buffer[SIZE];
+    
 
 
     return 0;

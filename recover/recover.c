@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define SIZE 512;
+#define SIZE 512
 
 bool isHeader (uint8_t buffer[])
 {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     {
         if (isHeader(buffer) == true) //creating new jpg in file
         {
-            if (outputPtr == NULL)
+            if (outputPtr != NULL)
             {
                 fclose(outputPtr);
             }

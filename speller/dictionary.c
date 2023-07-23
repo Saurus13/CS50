@@ -2,6 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -18,6 +21,10 @@ const unsigned int N = 26; //A - Z (26 letters)
 
 // Hash table
 node *table[N];
+
+//New Variables
+unsigned int count;
+unsigned int hashVal;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -42,6 +49,7 @@ bool load(const char *dictionary)
         printf("Cannot open %s\n", dictionary);
         return false;
     }
+    char word[LENGTH + 1];
 
     while (fscanf(file, "%s", word) != EOF) //read until end of file
     {
@@ -50,10 +58,16 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        
 
+        //Copy word to node
+        strcpy(n->word, word);
+        hashVal = hash(word);
+        n->next = table[hashVal];
+        table[hashVal] = n;
+        count++; //word counter
     }
-    return false;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded

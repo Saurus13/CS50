@@ -82,7 +82,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    
+    if (count > 0);
+    {
+        return count; //determined in 'load' function
+    }
     return 0;
 }
 

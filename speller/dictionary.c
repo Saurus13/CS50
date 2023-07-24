@@ -29,7 +29,16 @@ unsigned int hashVal;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    hashVal = hash(word); //obtain hash value
+    node *pointer = table[hashVal];
+    while (pointer != 0)
+    {
+        if (strcasecmp(word, pointer->word) == 0) //compare words
+        {
+            return true;
+        }
+        pointer = pointer->next; //move pointer
+    }
     return false;
 }
 
@@ -81,7 +90,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
     if (count > 0);
     {
         return count; //determined in 'load' function
@@ -92,6 +100,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    
     return false;
 }

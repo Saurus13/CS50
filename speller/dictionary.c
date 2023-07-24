@@ -100,6 +100,16 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+    for (int i = 0; i < N; i++) //go through buckets
+    {
+        node *pointer = table[i]; //point to next node
+        while (pointer != NULL)
+        {
+            node *tmp = pointer; //temp to free while pointer points to next node
+            pointer = pointer->next;
+            free(tmp);
+        }
+    }
+
     return false;
 }

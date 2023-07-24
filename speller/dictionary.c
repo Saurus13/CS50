@@ -90,7 +90,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    if (count > 0);
+    if (count > 0)
     {
         return count; //determined in 'load' function
     }
@@ -109,7 +109,10 @@ bool unload(void)
             pointer = pointer->next;
             free(tmp);
         }
+        if (pointer == NULL)
+        {
+            return true;
+        }
     }
-
     return false;
 }

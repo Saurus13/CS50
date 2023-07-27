@@ -9,7 +9,14 @@ Times:
 
 Questions:
 
-Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
-As the number of simulations grew, 
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+As the number of simulations grew, many of the predictions proved incorrect such as Belgium likely because
+after running more and more trials, the accuracy of the test was enhanced.
+
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?:
+
+I would say after 10000 simulations, the predictions could be considered "good enough". This is because in terms of time,
+this number still makes the simulations run fast while conducting a large number of tests. After 10000, the time begins to slow
+considerably.

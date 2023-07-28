@@ -16,5 +16,14 @@ def main():
         printf("Grade %i\n", rounded_index)
 
 def count_letters(string):
-    
+    num_letters = 0
+    for i in range(0, len(string), 1) # check if letter
+    {
+        if (isalpha(string[i]) != 0)
+        {
+            num_letters++;
+        }
+    }
+    return num_letters;
+
 main()

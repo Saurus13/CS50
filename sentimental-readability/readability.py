@@ -15,13 +15,25 @@ def main():
     elif 1.0 < index < 16.0:
         printf("Grade %i\n", rounded_index)
 
-def count_letters(string):
+def count_letters(text):
     num_letters = 0
     for i in range(0, len(string)): # check if letter
-        if string[i].isalpha():
+        if text[i].isalpha():
             num_letters += 1
     return num_letters
 
-def count_words(string):
-    
+def count_words(text):
+    num_words = 1
+    for i in range(0, len(text)): # check if space
+        if text[i].isspace():
+            num_words += 1
+    return num_words
+
+def count_sentences(text):
+    num_sentences = 0;
+    for i in range(0, len(text)): # check if punctuation
+        if text[i] == '!' or text[i] == '.' or text[i] == '?':
+            num_sentences += 1
+    return num_sentences
+
 main()

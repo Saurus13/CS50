@@ -17,9 +17,9 @@ def main():
 
 def count_letters(string):
     num_letters = 0
-    for i in range(0, len(string), 1) # check if letter
+    for i in range(0, len(string)) # check if letter
     {
-        if (isalpha(string[i]) != 0)
+        if string[i].isalpha()
         {
             num_letters++;
         }

@@ -27,28 +27,28 @@ def get_cents():
 
 def calculate_quarters(cents):
     quarters = 0
-    for i in range(1, cents, 1):
+    for i in range(1, cents + 1, 1):
         if i % 25 == 0:
             quarters += 1
     return quarters
 
 def calculate_dimes(cents):
     dimes = 0
-    for i in range(1, cents, 1):
+    for i in range(1, cents + 1, 1):
         if i % 10 == 0:
             dimes += 1
     return dimes
 
 def calculate_nickels(cents):
     nickels = 0
-    for i in range(1, cents, 1):
+    for i in range(1, cents + 1, 1):
         if i % 5 == 0:
             nickels += 1
     return nickels
 
 def calculate_pennies(cents):
     pennies = 0
-    for i in range(1, cents, 1):
+    for i in range(1, cents + 1, 1):
         if i % 1 == 0:
             pennies += 1
     return pennies

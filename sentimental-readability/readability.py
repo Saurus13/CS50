@@ -17,13 +17,11 @@ def main():
 
 def count_letters(string):
     num_letters = 0
-    for i in range(0, len(string)) # check if letter
-    {
-        if string[i].isalpha()
-        {
-            num_letters++;
-        }
-    }
-    return num_letters;
+    for i in range(0, len(string)): # check if letter
+        if string[i].isalpha():
+            num_letters += 1
+    return num_letters
 
+def count_words(string):
+    
 main()

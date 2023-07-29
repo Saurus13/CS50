@@ -26,8 +26,15 @@ def main():
         result[sub] = longest_match(sequences, sub)
 
     # Check database for matching profiles
-
-    return
+    for person in database:
+        match = 0
+        for sub in subsequences:
+            if int(person[sub]) == result[sub]:
+                match += 1
+        if match == len(subsequences):
+            print(person["name"])
+            return
+    print("No match")
 
 
 def longest_match(sequence, subsequence):

@@ -1,1 +1,2 @@
-If songs.db were to contain the top 100 songs from Spotify Wrapped in 2018, 
+If songs.db were to contain the top 100 songs from Spotify Wrapped in 2018, the person seems like an all around style
+person. This means they have a lot of different genres, however a lot of them are rap and hip hop.

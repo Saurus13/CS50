@@ -1,2 +1,6 @@
 If songs.db were to contain the top 100 songs from Spotify Wrapped in 2018, the person seems like an all around style
-person. This means they have a lot of different genres, however a lot of them are rap and hip hop.
+person. This means they have a lot of different genres, however a lot of them are rap and hip hop. This may not be very
+representative of the person however since the way I calculated this was by seeing the songs they listened to in 2018 alone.
+Additionally, it is not known how long they listened to each song for and how many times which would be key factors in this
+evaluation. To fix this, maybe we can find out the aura by knowing the persons overall songs listened to in order of most
+to least played as well as know who their favourite artist is.

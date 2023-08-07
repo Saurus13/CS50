@@ -12,3 +12,12 @@ WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transa
 AND atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
 SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
+
+SELECT id, hour, minute, origin_airport_id, destination_airport_id FROM flights WHERE year = 2021
+AND month = 7 AND day = 29 ORDER BY hour ASC;
+
+UPDATE flights SET origin_airport_id = airports.city FROM airports
+WHERE flights.origin_airport_id = airports.id;
+
+UPDATE flights SET destination_airport_id = airports.city FROM airports
+WHERE flights.destination_airport_id = airports.id;
